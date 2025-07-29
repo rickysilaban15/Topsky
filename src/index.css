@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-300 antialiased;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(300deg, #0f172a, #1e293b, #334155);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass-card {
+  @apply bg-slate-800/60 backdrop-blur-lg border border-slate-700/50 rounded-2xl;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white !important;
+  }
+  .print-hidden {
+    display: none !important;
+  }
+  .print-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .print-card {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0;
+  }
+  .print-text-black {
+    color: black !important;
+  }
+}
