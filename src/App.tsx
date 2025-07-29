@@ -20,7 +20,7 @@ import AdminUsers from './pages/admin/AdminUsers';
 import AdminGames from './pages/admin/AdminGames';
 import TransactionProgress from './pages/TransactionProgress';
 import ScrollToTop from './components/Common/ScrollToTop';
-import FAQ from './pages/FAQ';
+import FAQ from './pages/FAQ'; // Ensure this import matches your actual filename's case
 import HowToTopup from './pages/HowToTopup';
 import ContactUs from './pages/ContactUs';
 import Terms from './pages/Terms';
@@ -29,7 +29,7 @@ function App() {
   return (
     <AppProvider>
       <Router>
-         <ScrollToTop />
+        <ScrollToTop />
         <div className="min-h-screen flex flex-col font-sans animated-gradient">
           <Header />
           <main className="flex-1">
@@ -41,14 +41,13 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/search" element={<Search />} />
-              <Route path="/faq" element={<FAQ />} />   
+              <Route path="/faq" element={<FAQ />} /> {/* This is the intended FAQ route */}
               <Route path="/how-to-topup" element={<HowToTopup />} />
-              <Route path="/contact-us" element={<ContactUs />} />  
-              <Route path="/terms" element={<Terms />} /> 
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/terms" element={<Terms />} />
 
-              
-              {/* Placeholder Routes for Footer */}
-              <Route path="/faq" element={<PlaceholderPage title="FAQ" />} />
+              {/* Placeholder Routes for Footer - Removed duplicate /faq route */}
+              {/* <Route path="/faq" element={<PlaceholderPage title="FAQ" />} /> */}
               <Route path="/how-to-topup" element={<PlaceholderPage title="Cara Top-up" />} />
               <Route path="/contact-us" element={<PlaceholderPage title="Hubungi Kami" />} />
               <Route path="/terms" element={<PlaceholderPage title="Syarat & Ketentuan" />} />
