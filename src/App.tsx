@@ -20,7 +20,7 @@ import AdminUsers from './pages/admin/AdminUsers';
 import AdminGames from './pages/admin/AdminGames';
 import TransactionProgress from './pages/TransactionProgress';
 import ScrollToTop from './components/Common/ScrollToTop';
-import FAQ from './pages/faq';
+import FAQ from './pages/FAQ';
 import HowToTopup from './pages/HowToTopup';
 import ContactUs from './pages/ContactUs';
 import Terms from './pages/Terms';
