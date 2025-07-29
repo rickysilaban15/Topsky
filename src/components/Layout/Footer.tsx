@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/stev_ky_silaban/?__pwa=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-pink-500 transition-colors"
@@ -36,7 +36,7 @@ const Footer = () => {
                 <Instagram className="h-6 w-6" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/rickysilaban15"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-gray-300 transition-colors"
@@ -45,7 +45,7 @@ const Footer = () => {
                 <Github className="h-6 w-6" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/ricki.silaban.1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-blue-500 transition-colors"
@@ -54,7 +54,7 @@ const Footer = () => {
                 <Facebook className="h-6 w-6" />
               </a>
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6287818894504"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-green-500 transition-colors"

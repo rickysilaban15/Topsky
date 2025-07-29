@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
       colors: {
         primary: colors.indigo,
@@ -16,21 +16,37 @@ module.exports = {
         success: colors.green,
         danger: colors.red,
         warning: colors.amber,
+
+        // Tambahan warna untuk UI/UX login modern
+        background: {
+          DEFAULT: '#0f172a', // slate-900
+          soft: '#1e293b',     // slate-800
+          card: '#1e293b',     // slate-800 (bisa diganti sesuai kebutuhan)
+        },
       },
-      // Tambahkan ini untuk kemudahan penggunaan
+      spacing: {
+        'header-height': '64px',
+      },
+      borderRadius: {
+        'xl': '1rem',
+        '2xl': '1.5rem',
+      },
+      boxShadow: {
+        card: '0 10px 25px rgba(0,0,0,0.1)',
+      },
       backgroundSize: {
         'size-200': '200% 200%',
       },
       animation: {
-        'gradient': 'gradient-animation 18s ease infinite',
+        gradient: 'gradient-animation 18s ease infinite',
       },
       keyframes: {
         'gradient-animation': {
-          '0%': { 'background-position': '0% 50%' },
-          '50%': { 'background-position': '100% 50%' },
-          '100%': { 'background-position': '0% 50%' },
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
         },
-      }
+      },
     },
   },
   plugins: [],
