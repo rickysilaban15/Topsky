@@ -6,8 +6,15 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noEmit": true
   },
-  "include": ["**/*.ts", "**/*.d.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "api/**/*",
+    "src/**/*",
+    "pages/**/*",
+    "lib/**/*",
+    "types/**/*.d.ts"
+  ],
+  "exclude": ["node_modules", ".next", "dist"]
 }
