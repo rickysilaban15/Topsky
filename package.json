@@ -1,21 +1,46 @@
 {
-  "name": "topsky-backend",
+  "name": "vite-react-typescript-starter",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "esbuild": "^0.25.8",
+    "@faker-js/faker": "^9.9.0",
+    "axios": "^1.9.0",
+    "body-parser": "^2.2.0",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "framer-motion": "^12.23.11",
+    "googleapis": "^154.1.0",
+    "lucide-react": "^0.511.0",
     "midtrans-client": "^1.4.3",
-    "path-to-regexp": "^8.2.0"
+    "qrcode": "^1.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.7.1",
+    "react-timer-hook": "^4.0.5",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "@vercel/node": "^2.3.0",
-    "typescript": "^5.4.0",
-    "tsx": "^4.19.0"
-  },
-  "scripts": {
-    "build": "tsc -noEmit",
-    "dev": "tsx watch src/index.ts",
-    "start": "node dist/index.js"
+    "@eslint/js": "^9.27.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^4.5.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.27.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vite": "^6.3.5"
   }
 }
