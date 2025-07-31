@@ -2,6 +2,7 @@ import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { Users, DollarSign, ShoppingCart, Gamepad2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import clsx from 'clsx';
 
 const StatsCard: React.FC<{ icon: React.ReactNode; title: string; value: string; color: string }> = ({ icon, title, value, color }) => (
   <motion.div
@@ -10,7 +11,12 @@ const StatsCard: React.FC<{ icon: React.ReactNode; title: string; value: string;
     className="glass-card p-6"
   >
     <div className="flex items-center space-x-4">
-      <div className={`w-12 h-12 rounded-lg flex items-center justify-center bg-${color}-500/20 text-${color}-400`}>
+<div className={clsx(
+  'w-12 h-12 rounded-lg flex items-center justify-center',
+  `bg-${color}-500/20`,
+  `text-${color}-400`
+)}>
+
         {icon}
       </div>
       <div>
@@ -58,7 +64,14 @@ const Dashboard: React.FC = () => {
                   <td className="p-3 text-slate-300">{state.users.find(u => u.id === t.userId)?.name || 'N/A'}</td>
                   <td className="p-3 text-slate-300">{formatCurrency(t.amount)}</td>
                   <td className="p-3">
-                    <span className={`px-2 py-1 text-xs rounded-full bg-${t.status === 'completed' ? 'green' : 'amber'}-500/20 text-${t.status === 'completed' ? 'green' : 'amber'}-400`}>
+                    <span className={clsx(
+  'px-2 py-1 text-xs rounded-full',
+  {
+    'bg-green-500/20 text-green-400': t.status === 'completed',
+    'bg-amber-500/20 text-amber-400': t.status !== 'completed'
+  }
+)}>
+
                       {t.status}
                     </span>
                   </td>
